@@ -1,0 +1,4 @@
+resource "aws_lb_listener_certificate" "com-mysite-alb-listener-certificate" {
+  listener_arn    = aws_lb_listener.com-mysite-alb-listener.arn
+  certificate_arn = aws_acm_certificate_validation.com-mysite-mysite-org.certificate_arn
+}
